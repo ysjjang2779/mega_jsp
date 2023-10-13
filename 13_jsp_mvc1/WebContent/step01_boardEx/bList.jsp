@@ -26,7 +26,7 @@
 			%>
 				<tr>
 					<td><%=boardDTO.getBoardId() %></td>
-					<td><%=boardDTO.getSubject() %></td>
+					<td><a href="bDetail.jsp?boardId=<%=boardDTO.getBoardId()%>"><%=boardDTO.getSubject() %></a></td>
 					<td><%=boardDTO.getWriter() %></td>
 					<td><%=boardDTO.getEnrollDt() %></td>
 					<td><%=boardDTO.getReadCnt() %></td>
