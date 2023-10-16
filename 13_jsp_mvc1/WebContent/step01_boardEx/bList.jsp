@@ -21,22 +21,24 @@
 				<td>조회수</td>
 			</tr>
 			<%
+				int boardIdx = 1;
 				ArrayList<BoardDTO> boardList = BoardDAO.getInstance().getBoardList();
 				for(BoardDTO boardDTO : boardList){
 			%>
 				<tr>
-					<td><%=boardDTO.getBoardId() %></td>
+					<td><%=boardIdx %></td>
 					<td><a href="bDetail.jsp?boardId=<%=boardDTO.getBoardId()%>"><%=boardDTO.getSubject() %></a></td>
 					<td><%=boardDTO.getWriter() %></td>
 					<td><%=boardDTO.getEnrollDt() %></td>
 					<td><%=boardDTO.getReadCnt() %></td>
 				</tr>
 			<% 
+				boardIdx++;
 				}
 			%>
 			<tr>
 				<td colspan="5">
-					<input type="button" value="글쓰기" onclick="">
+					<input type="button" value="글쓰기" onclick="abc();">
 				</td>
 			</tr>
 		</table>

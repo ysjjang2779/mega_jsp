@@ -11,7 +11,7 @@
 <body>
 	<%
 		request.setCharacterEncoding("utf-8");
-	
+		
 		BoardDTO boardDTO = new BoardDTO();
 		
 		//boardDTO.writer = request.getParameter("writer");
@@ -29,7 +29,7 @@
 	<script>
 		alert("등록되었습니다.");
 		// location.href = "url" > url로 이동하는 함수
-		location.href = "bWrite.jsp";
+		location.href = "bList.jsp";
 	</script>
 </body>
 </html>

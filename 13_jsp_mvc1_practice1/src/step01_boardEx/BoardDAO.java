@@ -7,10 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-// DAO(Data Access Object) : 데이터 접근 객체
 public class BoardDAO {
-	
-	// SingleTon패턴
 	private BoardDAO() {}
 	private static BoardDAO instance = new BoardDAO();
 	public static BoardDAO getInstance() {

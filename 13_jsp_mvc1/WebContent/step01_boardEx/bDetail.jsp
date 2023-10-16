@@ -1,3 +1,5 @@
+<%@page import="step01_boardEx.BoardDTO"%>
+<%@page import="step01_boardEx.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,6 +11,7 @@
 
 	<%
 		long boardId = Long.parseLong(request.getParameter("boardId"));
+		BoardDTO boardDTO = BoardDAO.getInstance().getBoardDetail(boardId);
 	%>
 	<%=boardId %> 받아옴 나머지는 월요일에....
 	<div align="center">
@@ -16,27 +19,27 @@
 		<table border="1">
 			<tr>
 				<td>조회수</td>
-				<td></td>
+				<td><%=boardDTO.getReadCnt() %></td>
 			</tr>
 			<tr>
 				<td>작성자</td>
-				<td></td>
+				<td><%=boardDTO.getWriter() %></td>
 			</tr>
 			<tr>
 				<td>작성일</td>
-				<td></td>
+				<td><%=boardDTO.getEnrollDt() %></td>
 			</tr>
 			<tr>
 				<td>이메일</td>
-				<td></td>
+				<td><%=boardDTO.getEmail() %></td>
 			</tr>
 			<tr>
 				<td>제목</td>
-				<td></td>
+				<td><%=boardDTO.getSubject() %></td>
 			</tr>
 			<tr>
 				<td>글 내용</td>
-				<td></td>
+				<td><%=boardDTO.getContent() %></td>
 			</tr>
 			<tr>
 				<td colspan="2">
